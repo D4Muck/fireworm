@@ -14,4 +14,15 @@
  * limitations under the License.
  */
 
-include ':app', ':fireworm-lib'
+package at.d4muck.fireworm.sample;
+
+import at.d4muck.fireworm.Repository;
+
+/**
+ * @author Christoph Muck
+ */
+public class UsersRepository extends Repository<User> {
+    public UsersRepository() {
+        super(User.class);
+    }
+}

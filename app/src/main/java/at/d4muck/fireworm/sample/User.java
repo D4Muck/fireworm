@@ -14,4 +14,16 @@
  * limitations under the License.
  */
 
-include ':app', ':fireworm-lib'
+package at.d4muck.fireworm.sample;
+
+import at.d4muck.fireworm.reflection.annotation.Id;
+
+/**
+ * @author Christoph Muck
+ */
+public class User {
+    @Id
+    public String id;
+    public String name;
+    public String email;
+}

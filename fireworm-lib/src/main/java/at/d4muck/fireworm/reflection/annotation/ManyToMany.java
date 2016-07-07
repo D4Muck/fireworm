@@ -14,4 +14,19 @@
  * limitations under the License.
  */
 
-include ':app', ':fireworm-lib'
+package at.d4muck.fireworm.reflection.annotation;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+/**
+ * @author Christoph Muck
+ */
+@Retention(RetentionPolicy.RUNTIME)
+public @interface ManyToMany {
+    String mappedBy();
+
+    boolean reverse() default false;
+
+    boolean redundant() default true;
+}

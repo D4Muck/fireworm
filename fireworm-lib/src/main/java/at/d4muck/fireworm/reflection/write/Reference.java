@@ -14,4 +14,24 @@
  * limitations under the License.
  */
 
-include ':app', ':fireworm-lib'
+package at.d4muck.fireworm.reflection.write;
+
+import java.util.Collection;
+import java.util.Map;
+
+import at.d4muck.fireworm.reflection.model.ReflectiveModel;
+
+/**
+ * @author Christoph Muck
+ */
+public interface Reference {
+    void resolve();
+
+    Collection<? extends ReflectiveModel> getReferences();
+
+    void putReferenceIds();
+
+    void inflateReferences();
+
+    Map<String,Object> generateChildUpdates(String id);
+}

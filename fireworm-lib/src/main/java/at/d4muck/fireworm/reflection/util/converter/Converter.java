@@ -14,4 +14,15 @@
  * limitations under the License.
  */
 
-include ':app', ':fireworm-lib'
+package at.d4muck.fireworm.reflection.util.converter;
+
+/**
+ * @author Christoph Muck
+ */
+
+public interface Converter {
+
+    <T> boolean canConvertTo(Class<T> target);
+
+    <T> T convert(Object from, Class<T> to);
+}

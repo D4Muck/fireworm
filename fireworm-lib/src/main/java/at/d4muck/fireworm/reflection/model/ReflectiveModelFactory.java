@@ -14,4 +14,27 @@
  * limitations under the License.
  */
 
-include ':app', ':fireworm-lib'
+package at.d4muck.fireworm.reflection.model;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
+import at.d4muck.fireworm.reflection.util.ObjectConverter;
+
+/**
+ * @author Christoph Muck
+ */
+@Singleton
+public class ReflectiveModelFactory {
+
+    private final ObjectConverter converter;
+
+    @Inject
+    ReflectiveModelFactory(ObjectConverter converterProvider) {
+        this.converter = converterProvider;
+    }
+
+    public ReflectiveModel newReflectiveModelOf(Object model) {
+        return new ReflectiveModel(model, converter);
+    }
+}

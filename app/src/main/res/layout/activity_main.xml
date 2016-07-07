@@ -21,6 +21,6 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="at.d4muck.firebaseorm.sample.MainActivity">
+    tools:context="at.d4muck.fireworm.sample.MainActivity">
 
 </android.support.constraint.ConstraintLayout>

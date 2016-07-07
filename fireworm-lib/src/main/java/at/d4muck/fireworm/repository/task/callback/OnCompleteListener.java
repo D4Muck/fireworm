@@ -14,4 +14,14 @@
  * limitations under the License.
  */
 
-include ':app', ':fireworm-lib'
+package at.d4muck.fireworm.repository.task.callback;
+
+/**
+ * @author Christoph Muck
+ */
+public interface OnCompleteListener<T> {
+
+    void onSuccess(T result);
+
+    void onFailure(Throwable e);
+}

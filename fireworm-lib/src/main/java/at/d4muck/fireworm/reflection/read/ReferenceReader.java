@@ -14,4 +14,17 @@
  * limitations under the License.
  */
 
-include ':app', ':fireworm-lib'
+package at.d4muck.fireworm.reflection.read;
+
+import java.util.Set;
+
+import at.d4muck.fireworm.reflection.model.ReflectiveModel;
+
+/**
+ * @author Christoph Muck
+ */
+interface ReferenceReader {
+    Set<ReflectiveModel> getReferenceReflectiveModels();
+
+    void readReferences(Object references);
+}

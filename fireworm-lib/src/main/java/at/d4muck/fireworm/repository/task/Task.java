@@ -14,4 +14,19 @@
  * limitations under the License.
  */
 
-include ':app', ':fireworm-lib'
+package at.d4muck.fireworm.repository.task;
+
+import at.d4muck.fireworm.repository.task.callback.OnCompleteListener;
+
+/**
+ * @author Christoph Muck
+ */
+public interface Task<T> {
+    boolean isComplete();
+
+    boolean isSuccessful();
+
+    Throwable getException();
+
+    Task<T> addOnCompleteListener(OnCompleteListener<? super T> onSuccessListener);
+}

@@ -14,4 +14,25 @@
  * limitations under the License.
  */
 
-include ':app', ':fireworm-lib'
+package at.d4muck.fireworm;
+
+import javax.inject.Singleton;
+
+import at.d4muck.fireworm.reflection.ReflectionModule;
+import at.d4muck.fireworm.repository.Database;
+import at.d4muck.fireworm.repository.FirebaseModule;
+import dagger.Component;
+
+/**
+ * Created by cmuck on 02.07.16.
+ */
+@Singleton
+@Component(
+        modules = {
+                ReflectionModule.class,
+                FirebaseModule.class
+        }
+)
+interface AppComponent {
+    Database database();
+}
